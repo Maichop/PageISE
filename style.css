@@ -1,0 +1,829 @@
+:root {
+    --bg-light: #f9f9f7;
+    --bg-white: #ffffff;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --accent-color: #7d6c58;
+    /* Tono cálido elegante de fondo */
+    --border-color: #e5e5e3;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ESTRUCTURA LATERAL DE ETIQUETAS */
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--text-dark);
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.logo-bold {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    margin-top: 2px;
+}
+
+.nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+/* HERO SECTION */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    min-height: calc(100vh - 90px);
+    position: relative;
+    background-color: #e5e2dd;
+    /* Tono gris claro del fondo de la imagen */
+}
+
+.hero-content {
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 3rem;
+}
+
+.hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--text-dark);
+    color: var(--bg-white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.cta-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.hero-image {
+    background-color: #dedbd5;
+    position: relative;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-image: url('tu-foto-profesional.jpg');
+    /* Reemplazar con imagen real */
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.hero-vertical-text {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: #888;
+}
+
+/* SOBRE MÍ */
+.sobre-mi {
+    padding: 6rem 4rem;
+    background-color: var(--bg-white);
+}
+
+.sobre-mi-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+.sobre-mi-main h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.sobre-mi-main p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.sobre-mi-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.badge-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+}
+
+.badge-item h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.badge-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* METODOLOGÍA */
+.metodologia {
+    border-top: 1px solid var(--border-color);
+    padding-top: 3rem;
+}
+
+.metodologia-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
+
+.metodologia-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.step {
+    border-top: 1px solid var(--text-dark);
+    padding-top: 1rem;
+}
+
+.step-num {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.step h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* SERVICIOS */
+.servicios {
+    padding: 6rem 4rem;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+.servicios-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.servicios-header h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.servicios-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    align-self: end;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicio-card {
+    background-color: var(--bg-white);
+    padding: 3rem 2rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.servicio-num {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.servicio-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.servicio-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.servicio-card ul {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.servicio-card ul li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.servicio-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* CONTENEDOR PADRE */
+.sobre-mi-grid {
+    display: grid;
+    /* Define 2 columnas iguales y 2 filas de altura adaptable */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto; 
+    gap: 32px; /* Espaciado elegante entre los bloques */
+    align-items: stretch;
+}
+
+/* BLOQUE 1: TEXTO PRINCIPAL (Se coloca automáticamente en Columna 1, Fila 1) */
+.sobre-mi-main {
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+}
+
+.sobre-mi-main h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.sobre-mi-main p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+}
+
+/* BLOQUE 2: CUADRO DESTACADO (Columna 1, Fila 2) */
+.sobre-mi-destacado {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #f4f2ee; /* Fondo sutil estilo editorial */
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.destacado-numero {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--text-dark);
+}
+
+.destacado-texto {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* BLOQUE 3: LAS INSIGNIAS (Columna 2, abarca Fila 1 y Fila 2) */
+.sobre-mi-badges {
+    grid-column: 2;
+    grid-row: 1 / 3; /* Va desde la línea de fila 1 hasta la 3 (abarca 2 filas) */
+    
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+    
+    /* Flexbox interno para ordenar las insignias verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.badge-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.badge-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.badge-item h3 {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.badge-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE: En móviles se colapsa en una sola columna */
+@media (max-width: 992px) {
+    .sobre-mi-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    
+    .sobre-mi-badges {
+        grid-column: auto;
+        grid-row: auto;
+        padding: 2rem;
+    }
+    
+    .sobre-mi-main, .sobre-mi-destacado {
+        padding: 2rem;
+    }
+}
+
+
+/* RESULTADOS Y IMPACTO */
+.resultados {
+    padding: 6rem 4rem;
+    background-color: var(--bg-white);
+}
+
+.resultados-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.resultados-left h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.btn-dark {
+    display: inline-block;
+    background-color: var(--text-dark);
+    color: var(--bg-white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.stat-number {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* TESTIMONIAL CARD */
+/* DISEÑO BENTO GRID PARA TESTIMONIOS */
+.resultados-header-web {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.resultados-header-web h2 {
+    font-family: var(--font-sans);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.view-pricing {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ESTRUCTURA MATRIZ GRID */
+.testimonios-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr; /* Tres columnas asimétricas */
+    grid-template-rows: auto auto;
+    gap: 24px;
+}
+
+/* ESTILOS BASE DE LAS TARJETAS */
+.testimonio-card {
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* Animación suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    opacity: 0.4; /* Estado normal: ligeramente atenuado */
+    transform: scale(0.98);
+}
+
+/* ESTADO RESALTADO AUTOMÁTICO (ACTIVE) */
+.testimonio-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* CONFIGURACIÓN DE POSICIONES RECIENTES (ASIGNACIÓN GRID) */
+.testimonio-card[data-index="0"] {
+    grid-column: 1;
+    grid-row: 1 / 3; /* Ocupa las dos filas de la izquierda */
+}
+
+.testimonio-card[data-index="3"] {
+    grid-column: 2;
+    grid-row: 2; /* Ocupa el centro inferior alargado */
+}
+
+/* ESTILOS DE COLOR DE TARJETAS (Oscuro vs Claro) */
+/* El script dinámicamente les dará opacidad total cuando les toque */
+.testimonio-card.t-dark {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.testimonio-card.t-dark .testimonio-quote {
+    color: #ffffff;
+}
+
+.testimonio-card.t-dark .card-footer p {
+    color: #888888;
+}
+
+.testimonio-card.t-light {
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #eeeeee;
+}
+
+/* COMPONENTES INTERNOS DE LA TARJETA */
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Marcadores para colocar fotos reales fácilmente */
+.img-1 { background-image: url('avatar1.jpg'); }
+.img-2 { background-image: url('avatar2.jpg'); }
+.img-3 { background-image: url('avatar3.jpg'); }
+.img-4 { background-image: url('avatar4.jpg'); }
+.img-5 { background-image: url('avatar5.jpg'); }
+
+.rating {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.t-light .rating { color: #f5a623; }
+.t-dark .rating { color: #f5a623; }
+
+.testimonio-quote {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: #333333;
+}
+
+.card-footer h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.card-footer p {
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+/* DISEÑO RESPONSIVO PARA MÓVILES */
+@media (max-width: 992px) {
+    .testimonios-bento-grid {
+        grid-template-columns: 1fr; /* Colapsa a una sola columna */
+        gap: 16px;
+    }
+    
+    .testimonio-card[data-index="0"],
+    .testimonio-card[data-index="3"] {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+    .testimonio-card {
+        opacity: 1; /* En móviles es mejor mostrar todos legibles */
+        transform: none !important;
+        padding: 2rem;
+    }
+}
+
+
+/* LOGOS */
+.logos-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.6;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+/* CONTACTO */
+.contacto {
+    padding: 6rem 4rem;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+}
+
+.contacto-info h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-info p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.btn-primary-outline {
+    display: inline-block;
+    border: 1px solid var(--text-dark);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.sub-btn {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+/* FORMULARIO */
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-white);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--text-dark);
+}
+
+.btn-submit {
+    background-color: var(--text-dark);
+    color: var(--bg-white);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-end;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.footer-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+
+    .hero,
+    .sobre-mi-grid,
+    .servicios-header,
+    .servicios-grid,
+    .resultados-grid,
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .metodologia-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .header,
+    .hero-content,
+    .sobre-mi,
+    .servicios,
+    .resultados,
+    .contacto,
+    .footer {
+        padding: 2rem;
+    }
+}
